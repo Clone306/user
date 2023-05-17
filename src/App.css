@@ -1,38 +1,194 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: IBM Plex Mono;
 }
+body
+{
+   background:linear-gradient(162.42deg, rgba(99, 96, 255, 0.5) 13.91%, rgba(70, 67, 204, 0.5) 87.97%), radial-gradient(62.55% 225.1% at 80.68% 28.28%, #6A67FF 0%, #504ED1 100%);
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
+.main
+{
+   padding: 1rem;
+   
+}
+.h
+{
+   color: aliceblue;    
+    text-align: center;
+}
+.profile
+{
+    display: flex;
+    align-items: center;
+    background-color: #ECECEC;
+    margin: 1rem 0;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.profile h1
+{
+    font-size: medium;
+}
+.img
+{
+    border-radius: 100%;
+    margin: 1rem;
+    width: 20%;
+}
+.info
+{
+    position: fixed;
+    right: 200px;
+    text-align: center;
+    /* background-color: #ECECEC; */
+}
+.info img
+{
+    border-radius: 100%;
+}
+.card
+{
+    display: flex;
+    justify-content: space-between;
+}
+.spinner
+{
+  /* position: absolute; */
+  /* left: 600px;
+  top: 200px; */
+  /* width: 100%; */
+  /* display: table;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  margin: 0 auto; */
+}
+.spin
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.info-div
+{
+    padding: 2rem 3rem;
+    width: 30%;
+    transition: all 1s;
+    position: fixed;
+    right: 100px;
+top: 50px;
+    border-radius: 20px;
+    /* color: aliceblue; */
+    background-color:aliceblue
+}
+.info-div h1
+{
+    font-weight: 500;
+    font-size:large;
+}
+.info-div p
+{
+    padding:  1rem ;
+    
+
+}
+.about
+{
+    text-align: left;
+    padding-left: 10px;
+   display: grid;
+   
+}
+.about label
+{
+    font-size: medium;
+font-weight: 400;
+}
+.about li
+{
+    list-style-type: none;
+    font-weight: 600;
+    padding-left: 10px;
+}
+.about div
+{
+    margin: 0.55rem 0;
+}
+.close
+{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.box
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+@media screen  and (max-width:1115px){
+    .box
+    {
+        grid-template-columns: auto ;
+
+    }
+}
+@media screen and (max-width:833px){
+    .card
+    {
+        display: block;
+    }
+    .info-div
+    {
+        width: 50%;
+    }
+}
+@media screen  and (max-width:467px)
+{
+    .info-div
+    {
+        width: 60%;
+        right: 10px;
+        font-size: small;
+        /* left: 10px; */
+    /* padding: 2rem 4rem; */
+
+    }
+    .about div
+{
+    margin: 8px 0;
+}
+}
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 3px solid #FFF;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 3px solid;
+    border-color: #1ec3fe transparent;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
